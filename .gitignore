@@ -1,0 +1,9 @@
+*.properties
+.idea
+.project
+*.iml
+out
+libs
+gen
+bin
+build.xml
