@@ -11,6 +11,10 @@ import android.widget.RelativeLayout;
  * Date: 9/7/12
  * Time: 1:38 AM
  */
+
+/**
+ * Alters left/bottom margins
+ */
 public class MyTranslateAnimation extends Animation {
     private View mView;
     private final float fromX;
@@ -35,7 +39,7 @@ public class MyTranslateAnimation extends Animation {
                 (toX - fromX) * interpolatedTime + fromX;
         float y = (toY - fromY) * interpolatedTime + fromY;
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) mView.getLayoutParams();
-        params.setMargins(0, 0, (int) -x, (int) -y);
+        params.setMargins((int) x, (int) y, 0, 0);
         mView.requestLayout();
     }
 }
